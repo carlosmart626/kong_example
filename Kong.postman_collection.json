@@ -1,0 +1,554 @@
+{
+	"info": {
+		"name": "Kong",
+		"_postman_id": "e9af0492-20fe-8fd1-fed9-e6f270bf2af4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APIs",
+			"description": "",
+			"item": [
+				{
+					"name": "Get API Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/apis/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update API",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create/Update API",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"975356d5-4e66-4afc-a9b5-7c3b56cca605\",\n\t\"created_at\": 1516797377172,\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumers",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Consumer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"carlosmart626@gmail.com\",\n\t\"custom_id\": \"carlosmart626@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/consumers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"consumers",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Consumer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"carlosmart626@gmail.com\",\n\t\"custom_id\": \"carlosmart626@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"consumers",
+								"carlosmart626@gmail.com"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Consumer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"consumers",
+								"carlosmart626@gmail.com"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Consumer Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"consumers",
+								"carlosmart626@gmail.com"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Consumer List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8001/consumers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"consumers",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plugins",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Plugin to APIs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\",\n    \"config.prefix\": \"kronos\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos/plugins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos",
+								"plugins",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Plugin to APIs",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\",\n    \"config.prefix\": \"kronos\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos/plugins/028aee15-dbaa-4f00-b9ce-6fe729fa9235",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos",
+								"plugins",
+								"028aee15-dbaa-4f00-b9ce-6fe729fa9235"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Plugin to APIs",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos/plugins/028aee15-dbaa-4f00-b9ce-6fe729fa9235",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos",
+								"plugins",
+								"028aee15-dbaa-4f00-b9ce-6fe729fa9235"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Plugins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/plugins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"plugins",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Plugins Enabled in Kong",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/plugins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"plugins",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Plugin Schema",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/plugins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"plugins",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List API Plugins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/apis/khronos/plugins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"apis",
+								"khronos",
+								"plugins",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8001/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"status"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
