@@ -23,6 +23,8 @@ services:
       - ./djcourses:/code/
     links:
       - redis:redis
+    environment:
+     - SECRET_KEY=123
     command: ./run.sh
 
   kong:
