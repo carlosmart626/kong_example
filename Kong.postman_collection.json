@@ -1,14 +1,13 @@
 {
 	"info": {
 		"name": "Kong",
-		"_postman_id": "e9af0492-20fe-8fd1-fed9-e6f270bf2af4",
+		"_postman_id": "7db39d48-8ee9-5f93-9a86-cdc76fac2f14",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "APIs",
-			"description": "",
 			"item": [
 				{
 					"name": "Get API Info",
@@ -17,7 +16,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos",
+							"raw": "http://localhost:8001/apis/django",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -25,10 +24,9 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos"
+								"django"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -39,7 +37,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos",
+							"raw": "http://localhost:8001/apis/django",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -47,10 +45,9 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos"
+								"django"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -59,7 +56,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:8001/apis/",
 							"protocol": "http",
@@ -71,8 +71,7 @@
 								"apis",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -88,7 +87,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"http://192.168.20.101:8080\",\n    \"name\": \"django\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8001/apis/",
@@ -101,8 +100,7 @@
 								"apis",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -118,10 +116,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+							"raw": "{\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"http://localhost:8080\",\n    \"name\": \"django\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos",
+							"raw": "http://localhost:8001/apis/django",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -129,10 +127,9 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos"
+								"django"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -148,7 +145,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"id\": \"975356d5-4e66-4afc-a9b5-7c3b56cca605\",\n\t\"created_at\": 1516797377172,\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"https://krn.comparamejor.com:8081\",\n    \"name\": \"khronos\"\n}"
+							"raw": "{\n\t\"id\": \"975356d5-4e66-4afc-a9b5-7c3b56cca605\",\n\t\"created_at\": 1516797377172,\n\t\"hosts\": [\"localhost\"],\n    \"upstream_url\": \"http://localhost:8080\",\n    \"name\": \"django\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8001/apis/",
@@ -161,8 +158,7 @@
 								"apis",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -170,7 +166,6 @@
 		},
 		{
 			"name": "Consumers",
-			"description": "",
 			"item": [
 				{
 					"name": "Create Consumer",
@@ -197,8 +192,7 @@
 								"consumers",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -227,8 +221,7 @@
 								"consumers",
 								"carlosmart626@gmail.com"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -242,7 +235,10 @@
 								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com",
 							"protocol": "http",
@@ -254,8 +250,7 @@
 								"consumers",
 								"carlosmart626@gmail.com"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -264,7 +259,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com",
 							"protocol": "http",
@@ -276,8 +274,7 @@
 								"consumers",
 								"carlosmart626@gmail.com"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -288,7 +285,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8001/consumers/",
+							"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com/jwt",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -296,10 +293,10 @@
 							"port": "8001",
 							"path": [
 								"consumers",
-								""
+								"carlosmart626@gmail.com",
+								"jwt"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -307,7 +304,6 @@
 		},
 		{
 			"name": "Plugins",
-			"description": "",
 			"item": [
 				{
 					"name": "Add Plugin to APIs",
@@ -321,10 +317,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\",\n    \"config.prefix\": \"kronos\"\n}"
+							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\",\n    \"config.prefix\": \"django\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos/plugins/",
+							"raw": "http://localhost:8001/apis/django/plugins/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -332,12 +328,11 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos",
+								"django",
 								"plugins",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -353,10 +348,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\",\n    \"config.prefix\": \"kronos\"\n}"
+							"raw": "{\n\t\"name\": \"jwt\",\n    \"config.key_claim_name\": \"email\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos/plugins/028aee15-dbaa-4f00-b9ce-6fe729fa9235",
+							"raw": "http://localhost:8001/apis/django/plugins/b9b1e99f-1557-4aec-985b-507fcdf1fd19",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -364,12 +359,11 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos",
+								"django",
 								"plugins",
-								"028aee15-dbaa-4f00-b9ce-6fe729fa9235"
+								"b9b1e99f-1557-4aec-985b-507fcdf1fd19"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -388,7 +382,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos/plugins/028aee15-dbaa-4f00-b9ce-6fe729fa9235",
+							"raw": "http://localhost:8001/apis/django/plugins/028aee15-dbaa-4f00-b9ce-6fe729fa9235",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -396,12 +390,11 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos",
+								"django",
 								"plugins",
 								"028aee15-dbaa-4f00-b9ce-6fe729fa9235"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -430,8 +423,7 @@
 								"plugins",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -460,8 +452,7 @@
 								"plugins",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -490,8 +481,7 @@
 								"plugins",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -510,7 +500,7 @@
 							"raw": "{\n\t\"name\": \"datadog\",\n    \"config.host\": \"127.0.0.1\",\n    \"config.port\": \"8125\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8001/apis/khronos/plugins/",
+							"raw": "http://localhost:8001/apis/django/plugins/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -518,12 +508,11 @@
 							"port": "8001",
 							"path": [
 								"apis",
-								"khronos",
+								"django",
 								"plugins",
 								""
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -534,7 +523,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:8001/status",
 					"protocol": "http",
@@ -544,6 +536,82 @@
 					"port": "8001",
 					"path": [
 						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create JWT Credential",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"carlosmart626@gmail.com\",\n    \"secret\": \"@51_l#n+v-myy$b8=h908st@orx517$v_%qh$7815l$pn0$(79\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com/jwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"carlosmart626@gmail.com",
+						"jwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Credentials JWT User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com/jwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"carlosmart626@gmail.com",
+						"jwt"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Credential JWT User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8001/consumers/carlosmart626@gmail.com/jwt/ee2a16c6-467b-44e9-b15d-aaf44e75869d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"carlosmart626@gmail.com",
+						"jwt",
+						"ee2a16c6-467b-44e9-b15d-aaf44e75869d"
 					]
 				},
 				"description": ""

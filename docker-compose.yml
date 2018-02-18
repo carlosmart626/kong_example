@@ -7,9 +7,30 @@ services:
      - POSTGRES_USER=kong
      - POSTGRES_DB=kong
 
+  redis:
+    restart: always
+    container_name: redis
+    image: redis:4.0.7
+
+  djcourses:
+    restart: always
+    image: djcourses
+    container_name: djcourses
+    build: ./djcourses
+    ports:
+      - 8080:8080
+    volumes:
+      - ./djcourses:/code/
+    links:
+      - redis:redis
+    command: ./run.sh
+
   kong:
     container_name: kong
-    image: kong:latest
+    image: kong:0.12.1-alpine
+    depends_on:
+      - kong-database
+      - kong_migrations
     links:
      - "kong-database:kong-database"
     environment:
@@ -26,4 +47,21 @@ services:
      - "8443:8443"
      - "8001:8001"
      - "8444:8444"
-    # command: "kong migrations up"
+
+  kong_migrations:
+    container_name: kong_migratioins
+    image: kong:0.12.1-alpine
+    depends_on:
+      - kong-database
+    links:
+     - "kong-database:kong-database"
+    environment:
+     - KONG_DATABASE=postgres
+     - KONG_PG_HOST=kong-database
+     - KONG_PROXY_ACCESS_LOG=/dev/stdout
+     - KONG_ADMIN_ACCESS_LOG=/dev/stdout
+     - KONG_PROXY_ERROR_LOG=/dev/stderr
+     - KONG_ADMIN_ERROR_LOG=/dev/stderr
+     - KONG_ADMIN_LISTEN=0.0.0.0:8001
+     - KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
+    command: "kong migrations up --v"
